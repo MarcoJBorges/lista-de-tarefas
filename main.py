@@ -1,6 +1,70 @@
 print('================= LISTAS DE TAREFAS =================')
 
-junção = []
+banco_de_dados = []
+
+def listar(banco_de_dados):
+    for i, tarefa in enumerate(banco_de_dados, start=1):
+        print(f'{i}. {tarefa['tarefa']}')
+    
+
+
+
+def criar_tarefa(banco_de_dados):
+    nome = input('Digite a tarefa: ').strip()
+
+    for tarefa in banco_de_dados:
+        if tarefa['tarefa'] == nome:
+            print('Essa tarefa já existe.')
+            return
+
+    descrição = input('digite a descrição: ')
+    prioridade = input('''
+    ======= PRIORIDADE =======
+                        
+        1 - URGENTE
+        2 - ALTA
+        3 - MÉDIA
+        4 - BAIXA
+        
+        ==> ''')
+    categoria = input('''
+    ===== CATEGORIA =====
+        
+        1 - INDIVIDUAL
+        2 - LAZER
+        3 - TRABALHO
+        4 - FILHOS
+        
+    ===> ''')
+    
+    tarefa_db = {
+        'tarefa': nome,
+        'descrição': descrição,
+        'prioridade': prioridade,
+        'categoria': categoria 
+    }
+
+    banco_de_dados.append(banco_de_dados)
+    print('======= TAREFA ADICIONA A LISTA =======')
+    for chave, valor in tarefa_db.items():
+        print(f'{chave} == {valor}')
+
+
+def excluir_tarefa(banco_de_dados):
+    print('Tarefas atuais:')
+    for i, tarefa in enumerate(banco_de_dados):
+        print(f"{i+1} - {tarefa['tarefa']}")
+    indice = int(input('Digite o número da tarefa que quer excluir: ')) - 1
+    if 0 <= indice < len(banco_de_dados):
+        removida = banco_de_dados.pop(indice)
+        print(f"Tarefa '{removida['tarefa']}' removida com sucesso!")
+    else:
+        print("Número inválido.")
+
+
+def modificar(banco_de_dados):
+    return
+
 
 #MOSTRA O MENU
 def menu():
@@ -14,71 +78,17 @@ def menu():
         ==> ''')
 
         if mostrar == '1':
-            listar(junção)
+            listar(banco_de_dados)
         elif mostrar == '2':
-            criar_tarefa(junção)
+            criar_tarefa(banco_de_dados)
         elif mostrar == '3':
-            excluir_tarefa(junção)
+            excluir_tarefa(banco_de_dados)
         elif mostrar == '4':
-            print("Função alterar ainda não criada.")  
+            modificar(banco_de_dados) 
         elif mostrar == '5':
             print("Saindo do programa...")
             break
         else:
             print("Opção inválida.")
-
-
-def listar(junção):
-    for i, tarefa in enumerate(junção, start=1):
-        print(f'{i}. {tarefa['tarefa']}')
-    
-
-
-
-def criar_tarefa(junção):
-     pedirtarefa = input('digite a tarefa: ')
-     descrição = input('digite a descrição: ')
-     prioridade = input('''
-    ======= PRIORIDADE =======
-                        
-        1 - URGENTE
-        2 - ALTA
-        3 - MÉDIA
-        4 - BAIXA
-        
-        ==> ''')
-     categoria = input('''
-    ===== CATEGORIA =====
-        
-        1 - INDIVIDUAL
-        2 - LAZER
-        3 - TRABALHO
-        4 - FILHOS
-                       
-    ===> ''')
-     
-     tarefa = {
-          'tarefa': pedirtarefa,
-          'descrição': descrição,
-          'prioridade': prioridade,
-          'categoria': categoria 
-     }
-
-     junção.append(tarefa)
-     print('======= TAREFA ADICIONA A LISTA =======')
-     for chave, valor in tarefa.items():
-          print(f'{chave} == {valor}')
-
-
-def excluir_tarefa(junção):
-    print('Tarefas atuais:')
-    for i, tarefa in enumerate(junção):
-        print(f"{i+1} - {tarefa['tarefa']}")
-    indice = int(input('Digite o número da tarefa que quer excluir: ')) - 1
-    if 0 <= indice < len(junção):
-        removida = junção.pop(indice)
-        print(f"Tarefa '{removida['tarefa']}' removida com sucesso!")
-    else:
-        print("Número inválido.")
 
 menu()

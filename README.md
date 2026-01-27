@@ -12,13 +12,6 @@ Um pequeno projeto em **Python** para gerenciar uma lista de tarefas (“to-do l
 - [Como Rodar](#como-rodar)  
   - Pré-requisitos  
   - Passos  
-- [Estrutura do Projeto](#estrutura-do-projeto)  
-- [Como Usar](#como-usar)  
-- [Possíveis Melhorias](#possíveis-melhorias)  
-- [Contribuição](#contribuição)  
-- [Licença](#licença)  
-- [Autor](#autor)
-
 ---
 
 ## Visão Geral

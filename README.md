@@ -1,6 +1,6 @@
 # Lista de Tarefas
 
-Um pequeno projeto em **Python** para gerenciar uma lista de tarefas (“to-do list”), ideal para praticar conceitos de entrada de usuário, estrutura de dados e persistência (se for o caso).
+Um pequeno projeto em **Python** para gerenciar uma lista de tarefas (“to-do list”), ideal para praticar conceitos de entrada de usuário, estrutura de dados e persistência
 
 ---
 
@@ -23,17 +23,16 @@ Um pequeno projeto em **Python** para gerenciar uma lista de tarefas (“to-do l
 
 ## Visão Geral
 
-Esse projeto é uma **lista de tarefas simples**, desenvolvida em Python, voltada para iniciantes. Serve para registrar tarefas, marcar como concluídas e visualizar as tarefas pendentes. É uma boa forma de treinar lógica, manipulação de listas/dicionários e salvar dados (dependendo de como você implementou).
+para fins de treino e melhorar minha lógica, eu peguei um codigo antigo que eu tinha e melhores ele, adicionando novas funcionalidades, e otimizando ele com base nos meus novos avanços no python.
 
 ---
 
 ## Funcionalidades
 
 - Adicionar novas tarefas  
-- Listar todas as tarefas cadastradas  
-- Marcar uma tarefa como concluída  
-- Remover tarefas (opcional, se tiver)  
-- Persistência simples (se estiver salvando em arquivo ou memória)  
+- Listar todas as tarefas cadastradas   
+- Remover tarefas 
+- Persistência simples 
 
 ---
 

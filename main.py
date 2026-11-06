@@ -16,6 +16,7 @@ def adicionar():
             print("=======================================")
             print("tarefa adicionada com sucesso !!!")
 
+            
         elif aviso == 'N':
             print('entendido, fechando o processo')
             return False
@@ -25,6 +26,16 @@ def adicionar():
         print('LISTA: ')
         for palavras in Alista:
             print(f"- {palavras}")
+        print("=======================================")
+        print("tarefa adicionada com sucesso !!!")
+        print("Deseja adicionar outra ? S/N")
+        escolha_usuario = input('==>   ').strip().upper()
+        if escolha_usuario == 'S':
+            tarefa_para_adicionar = input("OK, qual tarefa vc quer adicionar? : ")
+            Alista.append(tarefa_para_adicionar)
+            print('LISTA: ')
+            for palavras in Alista:
+                print(f"- {palavras}")
         print("=======================================")
         print("tarefa adicionada com sucesso !!!")
         
